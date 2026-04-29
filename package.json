@@ -30,8 +30,19 @@
     "sweetalert2": "^11.0.0",
     "typescript": "~5.7.2"
   },
-  "keywords": ["angular", "version", "update", "pwa", "service-worker", "cache", "sweetalert2", "auto-update"],
-  "author": "muzzamil7770",
+  "keywords": [
+    "angular", "version", "update", "pwa", "service-worker",
+    "cache", "sweetalert2", "auto-update", "app-update",
+    "version-check", "cache-busting", "reload", "typescript"
+  ],
+  "author": {
+    "name": "Mohammad Muzzamil",
+    "url": "https://github.com/muzzamil7770"
+  },
+  "funding": {
+    "type": "github",
+    "url": "https://github.com/sponsors/muzzamil7770"
+  },
   "homepage": "https://github.com/muzzamil7770/app-update-agent#readme",
   "bugs": {
     "url": "https://github.com/muzzamil7770/app-update-agent/issues"
