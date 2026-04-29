@@ -1,6 +1,6 @@
 {
   "name": "@muzzamil7770/app-update-agent",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Framework-agnostic Angular app version monitor — detects updates, clears cache, unregisters service workers, and reloads with pluggable UI",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -12,7 +12,9 @@
       "types": "./dist/index.d.ts"
     }
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "tsc --project tsconfig.json",
     "prepublishOnly": "npm run build"
@@ -22,8 +24,12 @@
     "sweetalert2": ">=11.0.0"
   },
   "peerDependenciesMeta": {
-    "@angular/core": { "optional": true },
-    "sweetalert2": { "optional": true }
+    "@angular/core": {
+      "optional": true
+    },
+    "sweetalert2": {
+      "optional": true
+    }
   },
   "devDependencies": {
     "@angular/core": "^19.0.0",
@@ -31,9 +37,19 @@
     "typescript": "~5.7.2"
   },
   "keywords": [
-    "angular", "version", "update", "pwa", "service-worker",
-    "cache", "sweetalert2", "auto-update", "app-update",
-    "version-check", "cache-busting", "reload", "typescript"
+    "angular",
+    "version",
+    "update",
+    "pwa",
+    "service-worker",
+    "cache",
+    "sweetalert2",
+    "auto-update",
+    "app-update",
+    "version-check",
+    "cache-busting",
+    "reload",
+    "typescript"
   ],
   "author": {
     "name": "Mohammad Muzzamil",
