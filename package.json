@@ -1,7 +1,7 @@
 {
   "name": "@muzzamil7770/app-update-agent",
-  "version": "1.0.2",
-  "description": "Framework-agnostic Angular app version monitor — detects updates, clears cache, unregisters service workers, and reloads with pluggable UI",
+  "version": "1.0.3",
+  "description": "Framework-agnostic Angular app version monitor \u2014 detects updates, clears cache, unregisters service workers, and reloads with pluggable UI",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
@@ -33,6 +33,8 @@
   },
   "devDependencies": {
     "@angular/core": "^19.0.0",
+    "dotenv": "^8.2.0",
+    "node-fetch": "^3.3.2",
     "sweetalert2": "^11.0.0",
     "typescript": "~5.7.2"
   },
