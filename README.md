@@ -1,5 +1,5 @@
 # @muzzamil7770/app-update-agent
-
+ 
 [![npm version](https://img.shields.io/npm/v/@muzzamil7770/app-update-agent)](https://www.npmjs.com/package/@muzzamil7770/app-update-agent)
 [![license](https://img.shields.io/npm/l/@muzzamil7770/app-update-agent)](LICENSE)
 
