@@ -1,6 +1,6 @@
 {
   "name": "@muzzamil7770/app-update-agent",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Framework-agnostic Angular app version monitor — detects updates, clears cache, unregisters service workers, and reloads with pluggable UI",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
