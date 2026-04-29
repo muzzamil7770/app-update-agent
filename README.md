@@ -20,22 +20,21 @@ npm i @muzzamil7770/app-update-agent
 ### Update Prompt
 > The dialog shown to the user when a new version is detected.
 
-![Update Prompt Screenshot](docs/screenshots/update-prompt.png)
-
-### Progress / Reload Screen
-> The progress UI shown while cache is cleared and the app reloads.
-
-![Progress Screenshot](docs/screenshots/update-progress.png)
+![Update Prompt](docs/screenshots/update-prompt.png)
 
 ---
 
 ## Video Demo
 
-> Watch how the full update flow works — from version detection to reload.
+> Watch the full update flow — version detection → prompt → cache clear → reload.
 
-[![Watch the demo](docs/screenshots/video-thumbnail.png)](docs/demo.mp4)
+<video src="https://raw.githubusercontent.com/muzzamil7770/app-update-agent/main/docs/demo.mp4" width="100%" autoplay loop muted playsinline controls>
+  <a href="https://raw.githubusercontent.com/muzzamil7770/app-update-agent/main/docs/demo.mp4">
+    <img src="docs/screenshots/update-prompt.png" alt="Click to watch demo" width="100%" />
+  </a>
+</video>
 
-> 📌 **To add your own:** replace `docs/screenshots/update-prompt.png`, `docs/screenshots/update-progress.png`, and `docs/demo.mp4` with your actual files and commit them.
+> 💡 If the video doesn't play inline, [click here to watch the demo](https://raw.githubusercontent.com/muzzamil7770/app-update-agent/main/docs/demo.mp4)
 
 ---
 
