@@ -1,4 +1,4 @@
-name: Publish to npm
+name: Publish to npm & GitHub Packages
 
 on:
   push:
@@ -10,16 +10,17 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+      packages: write
 
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
-          registry-url: 'https://registry.npmjs.org'
 
       - name: Install dependencies
         run: npm ci
@@ -34,16 +35,38 @@ jobs:
       - name: Build
         run: npm run build
 
+      # ── Publish to npmjs.org ──────────────────────────────────────────────
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          registry-url: 'https://registry.npmjs.org'
+
       - name: Publish to npm
         run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
+      # ── Publish to GitHub Packages ────────────────────────────────────────
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          registry-url: 'https://npm.pkg.github.com'
+
+      - name: Publish to GitHub Packages
+        run: npm publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      # ── Create GitHub Release ─────────────────────────────────────────────
       - name: Create GitHub Release
         run: |
           VERSION=$(node -p "require('./package.json').version")
           gh release create "v$VERSION" \
             --title "v$VERSION" \
-            --notes "Published @muzzamil7770/app-update-agent@$VERSION to npm. Install: npm i @muzzamil7770/app-update-agent"
+            --notes "Published \`@muzzamil7770/app-update-agent@$VERSION\` to npm & GitHub Packages.
+
+  📦 **npm:** \`npm i @muzzamil7770/app-update-agent\`
+  🔗 https://www.npmjs.com/package/@muzzamil7770/app-update-agent" \
+            --latest
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
