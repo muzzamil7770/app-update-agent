@@ -61,12 +61,11 @@ jobs:
       - name: Create GitHub Release
         run: |
           VERSION=$(node -p "require('./package.json').version")
-          gh release create "v$VERSION" \
-            --title "v$VERSION" \
-            --notes "Published \`@muzzamil7770/app-update-agent@$VERSION\` to npm & GitHub Packages.
+          NOTES="Published @muzzamil7770/app-update-agent@${VERSION} to npm & GitHub Packages.
 
-  📦 **npm:** \`npm i @muzzamil7770/app-update-agent\`
-  🔗 https://www.npmjs.com/package/@muzzamil7770/app-update-agent" \
-            --latest
+          Install: npm i @muzzamil7770/app-update-agent
+          npm: https://www.npmjs.com/package/@muzzamil7770/app-update-agent"
+
+          gh release create "v${VERSION}" --title "v${VERSION}" --notes "${NOTES}" --latest
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
